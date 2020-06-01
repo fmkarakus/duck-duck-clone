@@ -4,6 +4,10 @@
 
 A reverse engineered copy of DuckDuck Go homepage
 
+## Wireframe
+
+![wireframe-services](./wireframe.png)
+
 ## 0. Set-Up
 
 > repository owner: Fatih
