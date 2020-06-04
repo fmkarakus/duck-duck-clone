@@ -12,7 +12,7 @@
 
     <!-- Leave this here!  It renders the review buttons  -->
     <script src='./evaluation/init.js'></script>
-    
+
 </head>
 
 <body>
@@ -21,7 +21,8 @@
         <nav id="navbar">
 
             <div id="social-menu">
-                <a class="ddgsi-horn-a" href="#" onclick="toggleMenu('social-menu-list')"><span class="ddgsi-horn"></span></a>
+
+                <a class="ddgsi-horn-a" href="#"><span class="ddgsi-horn"></span></a>
                 <div class="social-menu-list">
                     <div class="social-menu-item">
                         <a href=""><img src="./images/twitter.svg" alt="twitter">
@@ -47,9 +48,9 @@
             </div>
 
             <div id="flyout-menu">
-                <a class="ddgsi-a" href="#" onclick="toggleMenu('flyout-menu-list')">⇶</a>
+                <a class="ddgsi-a" href="#">⇶</a>
                 <div class="flyout-menu-list">
-                    <div class="flyout-menu-btn" onclick="toggleMenu('flyout-menu-list')"><span class="btnClose">X</span></div>
+                    <div class="flyout-menu-btn"><span class="btnClose">X</span></div>
                     <ul class="flyout-menu-list-ul">
                         <li class="flyout-menu-heading"><span>Settings</span></li>
                         <li class="flyout-menu-item clear"><a href="https://duckduckgo.com">Themes</a></li>
@@ -92,7 +93,7 @@
             <a href="#"><img src="./images/DuckDuckGo_logo-svg.svg" alt="logo"></a>
         </div>
         <div id="search">
-            <form >
+            <form>
                 <input type="text" placeholder="Search the web without being tracked">
                 <input type="submit" value="S">
             </form>
@@ -120,120 +121,125 @@
 
     </section>
 
-    <script>
-        function toggleMenu(menuBlock) {
+    <div class="title">How it Works</div>
+    <section class="container-fluid" id="cards">
 
-            var resBlock = document.getElementsByClassName(menuBlock)[0];
-            if (resBlock == undefined) {
-                return
+        <div class="card">
+            <img src="https://raw.githubusercontent.com/fmkarakus/duck-duck-clone/master/images/box.svg" alt="box" style="width: 100px;">
+            <h3>Add to Firefox</h3>
+            <p>Just a few clicks to install, and you're ready to go. It's that easy.</p>
+        </div>
+        <div class="card">
+            <img src="https://raw.githubusercontent.com/fmkarakus/duck-duck-clone/master/images/browser.svg" alt="browser" style="width: 100px;">
+            <h3>Browse as Usual</h3>
+            <p>We'll block hidden trackers and encrypt connections to keep you more private.</p>
+        </div>
+        <div class="card">
+            <img src="https://raw.githubusercontent.com/fmkarakus/duck-duck-clone/master/images/shield.svg" alt="shield" style="width: 100px;">
+            <h3>Enjoy Peace of Mind</h3>
+            <p>DuckDuckGo Privacy Essentials protects your privacy, wherever the Internet takes you.</p>
+        </div>
+
+    </section>
+
+    <section class="container-fluid" id="personal-info">
+        <div class="row">
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <h1> We don't store your<br> personal information.Ever.</h1>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <h5>Our privacy policy is simple: we don’t collect<br> or share any of your personal information.</h5>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="btn-holder"><button type="submit" name="button">Add DuckDuckGo to Chrome</button></div>
+            </div>
+            <img src="https://raw.githubusercontent.com/fmkarakus/duck-duck-clone/master/images/1-monster-v2--pre-animation.svg" alt="monster">
+            <br><br>
+        </div>
+
+    </section>
+    <section class="container-fluid" id="ads">
+        <div class="row">
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <h1> We don't follow you<br> around with ads.</h1>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <h5>We don't store your search history. We therefore have nothing to <br>sell to advertisers that track you across the Internet.
+                </h5>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="btn-holder"><button type="submit" name="button">Add DuckDuckGo to Chrome</button></div>
+            </div>
+
+            <img src="images/2-ghost-v2.svg" alt="ghost">
+            <br><br>
+        </div>
+
+
+    </section>
+
+    <!-- 4th Section; Privatebrowsing  -->
+
+    <section class="tab privatebrowsing">
+        <h2>We don’t track you in or out <br />of private browsing mode.</h2>
+        <p>
+            Other search engines track your searches even when you’re <br />in private browsing mode. We don’t track you — period.
+        </p>
+        <a class="chromelink" href="#">Add DucksDucksGo to Chrome</a>
+        <img class="container-image" alt="man-in-bathtub" src="images/3-bathtub-v2--pre-animation.svg">
+    </section>
+
+
+
+    <!-- 5th Section; Privacy  -->
+
+    <section class="tab privacy">
+        <div class="linksonlastpage">
+            <a class="dismissbutton" href="#">Dismiss forever |</a>
+            <a class="backtosearch" href="#">Back to search</a>
+        </div>
+        <h2>Switch to DuckDuckGo and<br />take back your privacy!</h2>
+        <p>
+            No tracking, no ad targeting, just searching.
+        </p>
+        <a class="chromelink" href="#">Add DucksDucksGo to Chrome</a>
+        <img class="container-image" alt="man-in-bathtub" src="images/4-alpinist-v2.svg">
+    </section>
+
+
+    <script>
+        document.body.addEventListener("click", hide_flyout);
+
+        function hide_flyout(e) {
+
+            var flyout_ = document.getElementsByClassName('flyout-menu-list')[0];
+            var flyout_lnk = document.getElementsByClassName('ddgsi-a')[0];
+
+            var social_ = document.getElementsByClassName('social-menu-list')[0];
+            var social_lnk = document.getElementsByClassName('ddgsi-horn')[0];
+
+            if (e.target !== social_ && e.target !== social_lnk) {
+                social_.style.display = 'none';
+
+            } else {
+                if (social_.style.display == 'block') {
+                    social_.style.display = 'none'
+                } else {
+                    social_.style.display = 'block'
+                }
             };
 
-            if (menuBlock === "flyout-menu-list") {
+            if (e.target !== flyout_ && e.target !== flyout_lnk) {
 
+                flyout_.style.right = '-300px';
 
-
-
- 
-
-                if (resBlock.style.right === "-300px" || resBlock.style.right == "") {
-                    resBlock.style.right = "0px";
-                    return;
-                };
-                resBlock.style.right = "-300px";
-            }
-
-            if (menuBlock === "social-menu-list") {
-                if (resBlock.style.display != "block") {
-                    resBlock.style.display = "block";
-                } else {
-                    resBlock.style.display = "none";
-                }
-                return;
+            } else {
+                flyout_.style.right = '0px';
             }
         }
     </script>
-
-<div class="title">How it Works</div>
-<section class="container-fluid" id= "cards">
-   
-    <div class="card">
-        <img src="https://raw.githubusercontent.com/fmkarakus/duck-duck-clone/master/images/box.svg"  alt="box"  style="width: 100px;">
-        <h3>Add to Firefox</h3>
-        <p>Just a few clicks to install, 
-        and you're ready to go. It's that easy.</p>
-    </div>
-    <div class="card">
-        <img src="https://raw.githubusercontent.com/fmkarakus/duck-duck-clone/master/images/browser.svg" alt="browser" style="width: 100px;">
-        <h3>Browse as Usual</h3>
-        <p>We'll block hidden trackers and
-             encrypt connections to keep you more private.</p>
-    </div>
-    <div class="card">
-        <img src="https://raw.githubusercontent.com/fmkarakus/duck-duck-clone/master/images/shield.svg" alt="shield" style="width: 100px;">
-        <h3>Enjoy Peace of Mind</h3>
-        <p>DuckDuckGo Privacy Essentials protects your privacy,
-             wherever the Internet takes you.</p>
-    </div>
-
-</section>
-<section class="container-fluid" id="personal-info" >
-    <div class="row">
-        
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <h1> We don't store your<br> personal information.Ever.</h1> </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><h5>Our privacy policy is simple: we don’t collect<br>
-            or share any of your personal information.</h5></div>
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><button type="submit" name="button">Add DuckDuckGo to Chrome</button></div>
-        <img  src="https://raw.githubusercontent.com/fmkarakus/duck-duck-clone/master/images/1-monster-v2--pre-animation.svg" alt="monster">  
-        <br><br>     
-   </div>
-
-</section>
-<section class="container-fluid" id="ads">
-    <div class="row">
-        
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><h1> We don't follow you<br> around with ads.</h1> </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><h5>We don't store your search history.
-            We therefore have nothing to <br>sell to advertisers that track you across the Internet.
-        </h5></div>
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><button type="submit" name="button">Add DuckDuckGo to Chrome</button></div>
-     
-    <img  src="images/2-ghost-v2.svg" alt="ghost">     
-    <br><br>     
-   </div>  
-  
-  
-</section>
-
-  <!-- 4th Section; Privatebrowsing  -->
-
-  <section class="tab privatebrowsing">
-    <h2>We don’t track you in or out <br />of private browsing mode.</h2>
-    <p>
-      Other search engines track your searches even when you’re <br />in
-      private browsing mode. We don’t track you — period.
-    </p>
-    <a class="chromelink" href="#">Add DucksDucksGo to Chrome</a>
-    <img class="container-image" alt="man-in-bathtub" src="images/3-bathtub-v2--pre-animation.svg"> 
-  </section>
-
-
-
-<!-- 5th Section; Privacy  -->
-
-<section class="tab privacy">
-  <div class="linksonlastpage">
-    <a class="dismissbutton" href="#">Dismiss forever |</a>
-    <a class="backtosearch" href="#">Back to search</a>
-  </div>
-  <h2>Switch to DuckDuckGo and<br />take back your privacy!</h2>
-  <p>
-    No tracking, no ad targeting, just searching.
-  </p>
-  <a class="chromelink" href="#">Add DucksDucksGo to Chrome</a>
-  <img class="container-image" alt="man-in-bathtub" src="images/4-alpinist-v2.svg"> 
-</section>
-
 
 </body>
 
