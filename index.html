@@ -16,81 +16,108 @@
 
 <body>
     <header>
-        <div class="header-wrapper">
 
-            <nav id="navbar">
+        <nav id="navbar">
 
-                <div id="social-menu">
-                    <a class="ddgsi-horn-a" href="#" onclick="toggleMenu('social-menu-list')"><span class="ddgsi-horn"></span></a>
-                    <div class="social-menu-list">
-                        <div class="social-menu-item">
-                            <a href=""><img src="./images/twitter.svg" alt="twitter">
-                                <p>Twitter</p>
-                            </a>
-                        </div>
-                        <div class="social-menu-item">
-                            <a href=""><img src="./images/reddit.svg" alt="reddit">
-                                <p>Reddit</p>
-                            </a>
-                        </div>
-                        <div class="social-menu-item">
-                            <a href=""><img src="./images/blog.svg" alt="blog">
-                                <p>Blog</p>
-                            </a>
-                        </div>
-                        <div class="social-menu-item">
-                            <a href=""><img src="./images/newsletter.svg" alt="newsletter">
-                                <p>Newsletter</p>
-                            </a>
-                        </div>
+            <div id="social-menu">
+                <a class="ddgsi-horn-a" href="#" onclick="toggleMenu('social-menu-list')"><span class="ddgsi-horn"></span></a>
+                <div class="social-menu-list">
+                    <div class="social-menu-item">
+                        <a href=""><img src="./images/twitter.svg" alt="twitter">
+                            <p>Twitter</p>
+                        </a>
+                    </div>
+                    <div class="social-menu-item">
+                        <a href=""><img src="./images/reddit.svg" alt="reddit">
+                            <p>Reddit</p>
+                        </a>
+                    </div>
+                    <div class="social-menu-item">
+                        <a href=""><img src="./images/blog.svg" alt="blog">
+                            <p>Blog</p>
+                        </a>
+                    </div>
+                    <div class="social-menu-item">
+                        <a href=""><img src="./images/newsletter.svg" alt="newsletter">
+                            <p>Newsletter</p>
+                        </a>
                     </div>
                 </div>
-
-                <div id="flyout-menu">
-                    <a class="ddgsi-a" href="#" onclick="toggleMenu('flyout-menu-list')">⇶</a>
-                    <div class="flyout-menu-list">
-                        <div class="flyout-menu-btn" onclick="toggleMenu('flyout-menu-list')"><span class="btnClose">X</span></div>
-                        <ul class="flyout-menu-list-ul">
-                            <li class="flyout-menu-heading"><span>Settings</span></li>
-                            <li class="flyout-menu-item clear"><a href="https://duckduckgo.com">Themes</a></li>
-                            <li class="flyout-menu-item"><a href="#">Other Settings</a></li>
-                            <li class="flyout-menu-item"><a href="#">!Bang Search Shortcuts</a></li>
-                        </ul>
-                        <ul class="flyout-menu-list-ul">
-                            <li class="flyout-menu-heading"><span>Privacy Essentials</span></li>
-                            <li class="flyout-menu-item"><a href="https://duckduckgo.com/">Private Search</a></li>
-                            <li class="flyout-menu-item"><a href="#">App and Extension</a></li>
-                        </ul>
-                        <ul class="flyout-menu-list-ul">
-                            <li class="flyout-menu-heading"><span>Why Privacy</span></li>
-                            <li class="flyout-menu-item"><a href="https://spreadprivacy.com/">Privacy Blog</a></li>
-                            <li class="flyout-menu-item"><a href="https://duckduckgo.com/newsletter">Privacy Crash Course</a></li>
-                            <li class="flyout-menu-item"><a href="#">Help Spread Privacy</a></li>
-                        </ul>
-                        <ul class="flyout-menu-list-ul">
-                            <li class="flyout-menu-heading"><span>Who We Are</span></li>
-                            <li class="flyout-menu-item"><a href="#">About Us</a></li>
-                            <li class="flyout-menu-item"><a href="#">Privacy Policy</a></li>
-                            <li class="flyout-menu-item"><a href="#">Careers</a></li>
-                            <li class="flyout-menu-item"><a href="#">Press Kit</a></li>
-                        </ul>
-                        <ul class="flyout-menu-list-ul">
-                            <li class="flyout-menu-heading"><span>Keep in Touch</span></li>
-                            <li class="flyout-menu-item"><a href="https://twitter.com/duckduckgo">Twitter</a></li>
-                            <li class="flyout-menu-item"><a href="https://duckduckgo.merchmadeeasy.com/">Store</a></li>
-                            <li class="flyout-menu-item"><a href="https://reddit.com/r/duckduckgo">Reddit</a></li>
-                            <li class="flyout-menu-item"><a href="https://help.duckduckgo.com/">Help</a></li>
-                        </ul>
-
-                    </div>
-
-            </nav>
-
-
-            <div class="logo"></div>
-            <div id="search"></div>
             </div>
+
+            <div id="flyout-menu">
+                <a class="ddgsi-a" href="#" onclick="toggleMenu('flyout-menu-list')">⇶</a>
+                <div class="flyout-menu-list">
+                    <div class="flyout-menu-btn" onclick="toggleMenu('flyout-menu-list')"><span class="btnClose">X</span></div>
+                    <ul class="flyout-menu-list-ul">
+                        <li class="flyout-menu-heading"><span>Settings</span></li>
+                        <li class="flyout-menu-item clear"><a href="https://duckduckgo.com">Themes</a></li>
+                        <li class="flyout-menu-item"><a href="#">Other Settings</a></li>
+                        <li class="flyout-menu-item"><a href="#">!Bang Search Shortcuts</a></li>
+                    </ul>
+                    <ul class="flyout-menu-list-ul">
+                        <li class="flyout-menu-heading"><span>Privacy Essentials</span></li>
+                        <li class="flyout-menu-item"><a href="https://duckduckgo.com/">Private Search</a></li>
+                        <li class="flyout-menu-item"><a href="#">App and Extension</a></li>
+                    </ul>
+                    <ul class="flyout-menu-list-ul">
+                        <li class="flyout-menu-heading"><span>Why Privacy</span></li>
+                        <li class="flyout-menu-item"><a href="https://spreadprivacy.com/">Privacy Blog</a></li>
+                        <li class="flyout-menu-item"><a href="https://duckduckgo.com/newsletter">Privacy Crash Course</a></li>
+                        <li class="flyout-menu-item"><a href="#">Help Spread Privacy</a></li>
+                    </ul>
+                    <ul class="flyout-menu-list-ul">
+                        <li class="flyout-menu-heading"><span>Who We Are</span></li>
+                        <li class="flyout-menu-item"><a href="#">About Us</a></li>
+                        <li class="flyout-menu-item"><a href="#">Privacy Policy</a></li>
+                        <li class="flyout-menu-item"><a href="#">Careers</a></li>
+                        <li class="flyout-menu-item"><a href="#">Press Kit</a></li>
+                    </ul>
+                    <ul class="flyout-menu-list-ul">
+                        <li class="flyout-menu-heading"><span>Keep in Touch</span></li>
+                        <li class="flyout-menu-item"><a href="https://twitter.com/duckduckgo">Twitter</a></li>
+                        <li class="flyout-menu-item"><a href="https://duckduckgo.merchmadeeasy.com/">Store</a></li>
+                        <li class="flyout-menu-item"><a href="https://reddit.com/r/duckduckgo">Reddit</a></li>
+                        <li class="flyout-menu-item"><a href="https://help.duckduckgo.com/">Help</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
     </header>
+
+    <section id="main">
+        <div id="logo">
+            <a href="#"><img src="./images/DuckDuckGo_logo-svg.svg" alt="logo"></a>
+        </div>
+        <div id="search">
+            <form action="">
+                <input type="text" placeholder="Search the web without being tracked">
+                <input type="submit" value="S">
+            </form>
+        </div>
+        <div id="info">
+            <h1>Tired of being tracked online? We can help.</h1>
+            <p>Get seamless privacy protection on your browser for free with one download:</p>
+        </div>
+
+        <div id="features">
+
+            <div class="ddg-feature"><img src="./images/feature.svg" alt="feature">
+                <p>Private Search</p>
+            </div>
+            <div class="ddg-feature"><img src="./images/feature.svg" alt="feature">
+                <p>Tracker Blocking</p>
+            </div>
+            <div class="ddg-feature"><img src="./images/feature.svg" alt="feature">
+                <p>Site Encryption</p>
+            </div>
+
+        </div>
+
+        <div id="badge"><span>Add DuckDuckGo to Chrome</span></div>
+
+    </section>
 
     <script>
         function toggleMenu(menuBlock) {
