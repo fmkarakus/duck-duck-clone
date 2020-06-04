@@ -91,7 +91,7 @@ ul {
     background-color: #5f63bd;
 }
 
-=======
+
 
 /* HEADER */
 
@@ -495,13 +495,16 @@ section {
 
 /* personal-info*/
 .title{
-    padding-left: 10vw;
+    
     text-align: center;
     color: #353748;
     font-weight: 800;
     font-size: 32px;
     position: absolute;
-    padding-bottom:50px;
+    top: 99%;
+    left: 42%;
+  
+
     
   }
   
@@ -615,7 +618,7 @@ section {
       max-width: 100%;
       max-height: 100%;
       height: 400px;
-      position: absolute;
+      
       
     }
     @media (max-width:768px) {
@@ -624,11 +627,13 @@ section {
          { 
           font-size:20px;
           line-height:20px;
+           
           
         }
         #personal-info h1{
           font-size:20px;
           line-height:24px;
+          margin-left: 40px;
         }
         #personal-info h5 {
           font-size:15px;
@@ -638,10 +643,19 @@ section {
         }
         #personal-info button{ 
           font-size: 14px;
-          margin-left: 25vw;
+          margin-left: 30vw;
           border-radius: 10px;   
       }
-      
+        #cards{
+            display: flex;
+            flex-direction:column;
+            
+        }
+        .title{
+            display: fixed;
+           margin-top: 50px;
+            left: 34%;
+        }
       }
       /* Ads*/
       #ads{
@@ -653,7 +667,6 @@ section {
         height:100%;
         font-family: inherit;
         margin: 0; 
-        margin-top: 24em;
         color: rgb(247, 242, 242);
       z-index: -1;
     }
@@ -695,19 +708,19 @@ section {
     
     
       #ads img{
-        width: 100vw;
+       margin-top: 5em;
         background-color:#F5A238;
         max-width: 100%;
         max-height: 100%;
         height: 400px;
-        position: absolute;
+        
        
       }
       @media (max-width:768px) {
       
         #ads   
          { 
-         margin-top:20em;
+         
           font-size:20px;
           line-height:20px;
          
@@ -717,11 +730,12 @@ section {
        {
           font-size:24px;
           line-height:24px;
+          margin-right:50px;
         }
         #ads h5 {
           font-size:15px;
           line-height:19px;
-          margin-right: 40px;
+          margin-right: 50px;
   
         }
         #ads button{ 
