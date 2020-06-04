@@ -4,10 +4,11 @@
 <head>
     <title>DuckDuckGo — Privacy, simplified.</title>
     <meta charset="utf-8" />
-
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css\flexboxgrid.css"/>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="flexboxgrid.css">
 
 
     <!-- Leave this here!  It renders the review buttons  -->
@@ -129,6 +130,11 @@
 
             if (menuBlock === "flyout-menu-list") {
 
+
+
+
+ 
+
                 if (resBlock.style.right === "-300px" || resBlock.style.right == "") {
                     resBlock.style.right = "0px";
                     return;
@@ -197,6 +203,18 @@
   
   
 </section>
+  <!-- 4th Section; Privatebrowsing  -->
+
+  <section class="tab privatebrowsing">
+    <h2>We don’t track you in or out <br />of private browsing mode.</h2>
+    <p>
+      Other search engines track your searches even when you’re <br />in
+      private browsing mode. We don’t track you — period.
+    </p>
+    <a class="chromelink" href="#">Add DucksDucksGo to Chrome</a>
+    <img class="container-image" alt="man-in-bathtub" src="images/3-bathtub-v2--pre-animation.svg"> 
+  </section>
+
 </body>
 
 </html>
