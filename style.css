@@ -2,7 +2,8 @@
 
 @font-face {
     font-family: 'ddg-serp-icons';
-    src: url("./fonts/ddg-serp-icons.woff");
+    /* src: url("./fonts/ddg-serp-icons.woff"); */
+    src: url("https://fmkarakus.github.io/duck-duck-clone/fonts/ddg-serp-icons.woff");
     font-weight: normal;
     font-style: normal
 }
