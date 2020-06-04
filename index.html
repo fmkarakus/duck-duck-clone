@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" type="text/css" href="css\flexboxgrid.css"/>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="flexboxgrid.css">
 
@@ -16,8 +16,194 @@
 </head>
 
 <body>
+    <header>
 
-<!-- 4th Section; Privatebrowsing  -->
+        <nav id="navbar">
+
+            <div id="social-menu">
+                <a class="ddgsi-horn-a" href="#" onclick="toggleMenu('social-menu-list')"><span class="ddgsi-horn"></span></a>
+                <div class="social-menu-list">
+                    <div class="social-menu-item">
+                        <a href=""><img src="./images/twitter.svg" alt="twitter">
+                            <p>Twitter</p>
+                        </a>
+                    </div>
+                    <div class="social-menu-item">
+                        <a href=""><img src="./images/reddit.svg" alt="reddit">
+                            <p>Reddit</p>
+                        </a>
+                    </div>
+                    <div class="social-menu-item">
+                        <a href=""><img src="./images/blog.svg" alt="blog">
+                            <p>Blog</p>
+                        </a>
+                    </div>
+                    <div class="social-menu-item">
+                        <a href=""><img src="./images/newsletter.svg" alt="newsletter">
+                            <p>Newsletter</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="flyout-menu">
+                <a class="ddgsi-a" href="#" onclick="toggleMenu('flyout-menu-list')">⇶</a>
+                <div class="flyout-menu-list">
+                    <div class="flyout-menu-btn" onclick="toggleMenu('flyout-menu-list')"><span class="btnClose">X</span></div>
+                    <ul class="flyout-menu-list-ul">
+                        <li class="flyout-menu-heading"><span>Settings</span></li>
+                        <li class="flyout-menu-item clear"><a href="https://duckduckgo.com">Themes</a></li>
+                        <li class="flyout-menu-item"><a href="#">Other Settings</a></li>
+                        <li class="flyout-menu-item"><a href="#">!Bang Search Shortcuts</a></li>
+                    </ul>
+                    <ul class="flyout-menu-list-ul">
+                        <li class="flyout-menu-heading"><span>Privacy Essentials</span></li>
+                        <li class="flyout-menu-item"><a href="https://duckduckgo.com/">Private Search</a></li>
+                        <li class="flyout-menu-item"><a href="#">App and Extension</a></li>
+                    </ul>
+                    <ul class="flyout-menu-list-ul">
+                        <li class="flyout-menu-heading"><span>Why Privacy</span></li>
+                        <li class="flyout-menu-item"><a href="https://spreadprivacy.com/">Privacy Blog</a></li>
+                        <li class="flyout-menu-item"><a href="https://duckduckgo.com/newsletter">Privacy Crash Course</a></li>
+                        <li class="flyout-menu-item"><a href="#">Help Spread Privacy</a></li>
+                    </ul>
+                    <ul class="flyout-menu-list-ul">
+                        <li class="flyout-menu-heading"><span>Who We Are</span></li>
+                        <li class="flyout-menu-item"><a href="#">About Us</a></li>
+                        <li class="flyout-menu-item"><a href="#">Privacy Policy</a></li>
+                        <li class="flyout-menu-item"><a href="#">Careers</a></li>
+                        <li class="flyout-menu-item"><a href="#">Press Kit</a></li>
+                    </ul>
+                    <ul class="flyout-menu-list-ul">
+                        <li class="flyout-menu-heading"><span>Keep in Touch</span></li>
+                        <li class="flyout-menu-item"><a href="https://twitter.com/duckduckgo">Twitter</a></li>
+                        <li class="flyout-menu-item"><a href="https://duckduckgo.merchmadeeasy.com/">Store</a></li>
+                        <li class="flyout-menu-item"><a href="https://reddit.com/r/duckduckgo">Reddit</a></li>
+                        <li class="flyout-menu-item"><a href="https://help.duckduckgo.com/">Help</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="main">
+        <div id="logo">
+            <a href="#"><img src="./images/DuckDuckGo_logo-svg.svg" alt="logo"></a>
+        </div>
+        <div id="search">
+            <form action="">
+                <input type="text" placeholder="Search the web without being tracked">
+                <input type="submit" value="S">
+            </form>
+        </div>
+        <div id="info">
+            <h1>Tired of being tracked online? We can help.</h1>
+            <p>Get seamless privacy protection on your browser for free with one download:</p>
+        </div>
+
+        <div id="features">
+
+            <div class="ddg-feature"><img src="./images/feature.svg" alt="feature">
+                <p>Private Search</p>
+            </div>
+            <div class="ddg-feature"><img src="./images/feature.svg" alt="feature">
+                <p>Tracker Blocking</p>
+            </div>
+            <div class="ddg-feature"><img src="./images/feature.svg" alt="feature">
+                <p>Site Encryption</p>
+            </div>
+
+        </div>
+
+        <div id="badge"><span>Add DuckDuckGo to Chrome</span></div>
+
+    </section>
+
+    <script>
+        function toggleMenu(menuBlock) {
+
+            var resBlock = document.getElementsByClassName(menuBlock)[0];
+            if (resBlock == undefined) {
+                return
+            };
+
+            if (menuBlock === "flyout-menu-list") {
+
+
+
+
+ 
+
+                if (resBlock.style.right === "-300px" || resBlock.style.right == "") {
+                    resBlock.style.right = "0px";
+                    return;
+                };
+                resBlock.style.right = "-300px";
+            }
+
+            if (menuBlock === "social-menu-list") {
+                if (resBlock.style.display != "block") {
+                    resBlock.style.display = "block";
+                } else {
+                    resBlock.style.display = "none";
+                }
+                return;
+            }
+        }
+    </script>
+<div class="title" id="cards">How it Works</div>
+<section class="container-fluid" id= "cards">
+   
+    <div class="card">
+        <img src="/images/box.svg" style="width: 100px;">
+        <h3>Add to Firefox</h3>
+        <p>Just a few clicks to install, 
+        and you're ready to go. It's that easy.</p>
+    </div>
+    <div class="card">
+        <img src="/images/browser.svg" style="width: 100px;">
+        <h3>Browse as Usual</h3>
+        <p>We'll block hidden trackers and
+             encrypt connections to keep you more private.</p>
+    </div>
+    <div class="card">
+        <img src="/images/shield.svg" style="width: 100px;">
+        <h3>Enjoy Peace of Mind</h3>
+        <p>DuckDuckGo Privacy Essentials protects your privacy,
+             wherever the Internet takes you.</p>
+    </div>
+
+
+</section>
+<section class="container-fluid" id="personal-info" >
+    <div class="row">
+        
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><h1> We don't store your<br> personal information.Ever.</h1> </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><h5>Our privacy policy is simple: we don’t collect<br>
+            or share any of your personal information.</h5></div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><button type="submit" name="button">Add DuckDuckGo to Chrome</button></div>
+        <img  src="/images/1-monster-v2--pre-animation.svg" alt="">  
+        <br><br>     
+   </div>
+    </div>
+</section>
+<section class="container-fluid" id="ads">
+    <div class="row">
+        
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><h1> We don't follow you<br> around with ads.</h1> </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><h5>We don't store your search history.
+            We therefore have notthing to <br>sell to advertisers that track you across the Internet.
+        </h5></div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><button type="submit" name="button">Add DuckDuckGo to Chrome</button></div>
+        <br><br>
+        <img  src="/images/2-ghost-v2.svg" alt="">     
+            
+   </div>  
+  
+  
+</section>
+  <!-- 4th Section; Privatebrowsing  -->
 
   <section class="tab privatebrowsing">
     <h2>We don’t track you in or out <br />of private browsing mode.</h2>
@@ -29,7 +215,6 @@
     <img class="container-image" alt="man-in-bathtub" src="images/3-bathtub-v2--pre-animation.svg"> 
   </section>
 
- 
 </body>
 
 </html>
