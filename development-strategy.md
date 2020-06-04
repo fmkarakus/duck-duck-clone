@@ -6,7 +6,7 @@ A reverse engineered copy of DuckDuck Go homepage
 
 ## Wireframe
 
-![wireframe-services](./wireframe.png)
+![wireframe-services](./wireframe.jpg)
 
 ## 0. Set-Up
 
